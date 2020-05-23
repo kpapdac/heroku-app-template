@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+  <p><a href="{% url 'logout' %}">logout</a></p>
+  <div class="container">
+
+
+  <h2>Ομιλία 1</h2>
+
+  <audio controls>
+    <source src="xxxxxxxxxxxxx" type="audio/mp3">
+  </audio>
+
+  <h2>Ομιλία 2</h2>
+
+  <audio controls>
+    <source src="xxxxxxxxxxxxx" type="audio/ogg">
+  </audio>
+
+  <h2>Ομιλία 3</h2>
+
+  <audio controls>
+    <source src="xxxxxxxxxxxxx" type="audio/mp4">
+  </audio>
+
+  <h2>Ομιλία 4</h2>
+
+  <audio controls>
+    <source src="xxxxxxxxxxxxx" type="audio/mp4">
+  </audio>
+
+  <h2>Ομιλία 5</h2>
+
+  <audio controls>
+    <source src="xxxxxxxxxxxxx" type="audio/mp4">
+  </audio>
+
+  <h2>Ομιλία 6</h2>
+
+  <audio controls>
+    <source src="xxxxxxxxxxxxx" type="audio/mp4">
+  </audio>
+
+  <h2>Ομιλία 7</h2>
+
+  <audio controls>
+    <source src="xxxxxxxxxxxxx" type="audio/mp4">
+  </audio>
+
+</div>
+{% else %}
+    <p>You are not logged in</p>
+    <a href="{% url '/accounts/login' %}">login</a>
+{% endif %}
+{% endblock %}

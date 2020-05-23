@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<h1>Κύκλος Νέων!</h1>
+<a href="{% url 'contents' %}" style='font-size:2em'>Contents</a>
+<br>
+<a href="{% url 'signup' %}" style='font-size:2em'>s</a>
+<hr>
+
+{% block content %}
+{% if user.is_authenticated %}
+    <p><a href="{% url 'logout' %}">logout</a></p>
+    <br>
+    <br>
+    <h2>Ομιλίες 2018-2019</h2>
+    <br>
+    <a href="{% url 'omilia1' %}" style='font-size:1.5em'>Η έγερση του Λαζάρου</a>
+    <br>
+    <a href="{% url 'omilia2' %}" style='font-size:1.5em'>Η είσοδος στα Ιεροσόλυμα</a>
+    <br>
+    <a href="{% url 'omilia3' %}" style='font-size:1.5em'>Ο Μυστικός Δείπνος</a>
+    <br>
+    <a href="{% url 'omilia4' %}" style='font-size:1.5em'>Τελευταίοι λόγοι του Χριστού προς τους μαθητές του</a>
+    <br>
+    <a href="{% url 'omilia5' %}" style='font-size:1.5em'>Το πάθος του Χριστού</a>
+    <br>
+    <a href="{% url 'omilia6' %}" style='font-size:1.5em'>H Ανάσταση του Χριστού</a>
+    <br>
+    <a href="{% url 'omilia7' %}" style='font-size:1.5em'>Η επίσκεψη του Χριστού στους μαθητές μετά την Ανάσταση</a>
+    <br>
+    <br>
+    <a href="{% url 'text' %}" style='font-size:2em'>Ομιλίες 2019-2020</a>
+    <br>
+    <br>
+    <a href="{% url 'kyrhgmata' %}" style='font-size:2em'>Κυρήγματα της Κυριακής</a>
+
+{% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}
+</body>
+</html>

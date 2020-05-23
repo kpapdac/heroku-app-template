@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+    <p><a href="{% url 'logout' %}">logout</a></p>
+    <h2>Λίγα λόγια</h2>
+
+    <img src="{% static 'kyklos.jpg' %}"/>
+
+
+{% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}
