@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Python: Getting Started
 
 A barebones Django app, which can easily be deployed to Heroku.
@@ -47,4 +46,3 @@ For more information about using Python on Heroku, see these Dev Center articles
 =======
 # heroku-app-template
 template for django app using heroku for deployment
->>>>>>> 6b8281f7820fe1dabb06d102578a5b5843179c56
