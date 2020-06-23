@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+  <p><a href="{% url 'logout' %}">logout</a></p>
+  <div class="container">
+
+
+<h2>Ομιλία 3</h2>
+<h3>Ο Μυστικός Δείπνος</h3>
+
+<img src="https://omilies-kyklos.s3.eu-west-2.amazonaws.com/static/omilia3.jpg"/>
+<audio controls>
+    <source src="https://omilies-kyklos.s3.eu-west-2.amazonaws.com/static/REC005.WAV" type="audio/wav">
+</audio>
+
+</div>
+{% else %}
+    <p>You are not logged in</p>
+    <a href="{% url '/accounts/login' %}">login</a>
+{% endif %}
+{% endblock %}
