@@ -1,3 +1,6 @@
+This repository combines the templates from heroku and django framework to build a web app.
+Files are saved in aws s3 buckets and the app is deployed in heroku server.
+
 # Python: Getting Started
 
 A barebones Django app, which can easily be deployed to Heroku.
